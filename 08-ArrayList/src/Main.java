@@ -57,8 +57,8 @@ public class Main {
             copyOfColors.add(null);  // Add nulls to ensure the destination list has enough space
         }
         Collections.copy(copyOfColors, colors);
-        System.out.println("Source arraylist -" + colors);
-        System.out.println("Destination arraylist - " + copyOfColors);
+        System.out.println("Source arraylist =" + colors);
+        System.out.println("Destination arraylist = " + copyOfColors);
 
 
         //10.reverse elements in an array list
