@@ -16,12 +16,13 @@ public class Main {
         ListNode mergedList2 = solution.mergeTwoLists(list1b, list2b);
         printList(mergedList2);
 
-        // Example 3
+        //Example 3
         ListNode list1c = null;
         ListNode list2c = new ListNode(0);
         ListNode mergedList3 = solution.mergeTwoLists(list1c, list2c);
         printList(mergedList3);
     }
+
 
     // Метод для вывода списка на экран
     public static void printList(ListNode head) {
