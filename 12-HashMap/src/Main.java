@@ -1,5 +1,7 @@
 package src;
 
+//Костенко -> K має код 202 => 202%6 = 4. Варіант - 4
+
 public class Main {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
