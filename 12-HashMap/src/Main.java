@@ -6,10 +6,15 @@ public class Main {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
 
-        inventory.addProduct("E00","Nail Polish", 220);
-        inventory.addProduct("E01","Lamp", 40);
-        inventory.addProduct("E02","Accesories", 85);
-        inventory.addProduct("E03","Hair dryer",100);
+        Product product1 = new Product("E00","Nail Polish", 220);
+        Product product2 = new Product("E01", "Lamp", 40);
+        Product product3 = new Product("E02","Accesories", 85);
+        Product product4 = new Product("E03","Hair dryer",100);
+
+        inventory.addProduct(product1);
+        inventory.addProduct(product2);
+        inventory.addProduct(product3);
+        inventory.addProduct(product4);
 
         inventory.displayAllProducts();
 

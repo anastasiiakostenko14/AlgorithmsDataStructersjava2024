@@ -1,11 +1,11 @@
 package src;
 
 public class Product {
-    String productCode;
-    String name;
+    final String productCode;
+    final String name;
     int quantity;
 
-    Product(String productCode, String name, int quantity){
+    Product(final String productCode, final String name, int quantity){
         this.productCode = productCode;
         this.name = name;
         if(quantity<0){
