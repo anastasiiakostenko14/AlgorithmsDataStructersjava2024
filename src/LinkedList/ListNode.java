@@ -1,18 +1,21 @@
 package LinkedList;
 
 public class ListNode {
-    public int val;
+    // Поле val оголошено як final, оскільки його не можна змінити після ініціалізації
+    public final int val;
     public ListNode next;
 
-    // Конструкторы
-    public ListNode() {}
-    public ListNode(int val) { this.val = val; }
+    // Конструктори
+    public ListNode(int val) {
+        this.val = val;
+    }
+
     public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
 
-    // Переопределила метод toString() c суперкласса Object для выведения списка
+    // Переопределение toString для вывода списка
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
@@ -21,6 +24,6 @@ public class ListNode {
             result.append(current.val).append(" ");
             current = current.next;
         }
-        return result.toString().trim();  // удалим в конце лишние пробелы
+        return result.toString().trim();
     }
 }
