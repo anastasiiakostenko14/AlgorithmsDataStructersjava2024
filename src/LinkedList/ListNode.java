@@ -1,16 +1,15 @@
 package LinkedList;
 
 public class ListNode {
-    // Поле val оголошено як final, оскільки його не можна змінити після ініціалізації
-    public int val;
+    public final int val;
     public ListNode next;
 
     // Конструктори
-    public ListNode(int val) {
+    public ListNode(final int val) {
         this.val = val;
     }
 
-    public ListNode(int val, ListNode next) {
+    public ListNode(final int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
