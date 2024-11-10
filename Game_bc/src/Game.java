@@ -20,7 +20,7 @@ public class Game {
                 break;
             } else {
                 int bulls = countBulls(guess, secretNumber);
-                int cows = countCows(guess, secretNumber) - bulls;//тут мінусуємо биків,щоб показало тільки ті цифри,які не тільки вгадані,але і не на своїх місцях
+                int cows = countCows(guess, secretNumber);
                 System.out.printf("Майже!Биків: %d, коров: %d%n", bulls, cows);
             }
         }
@@ -36,13 +36,32 @@ public class Game {
         return bulls;
     }
 
-    private int countCows(String guess, String secretNumber){
+    private int countCows(String guess, String secretNumber) {
         int cows = 0;
-        for(char c: guess.toCharArray()){
-            if(secretNumber.contains(String.valueOf(c))){
-                cows ++;
+        boolean[] bullFlags = new boolean[guess.length()]; // Маркуємо позиції, які вже є "биками"
+
+        // Спочатку відзначаємо позиції "биків"
+        for (int i = 0; i < guess.length(); i++) {
+            if (guess.charAt(i) == secretNumber.charAt(i)) {
+                bullFlags[i] = true; // Ця позиція - "бик"
             }
         }
+
+        // Потім рахуємо "корів" для цифр, які не є "биками"
+        for (int i = 0; i < guess.length(); i++) {
+            if (!bullFlags[i]) { // Якщо ця цифра не є "биком"
+                char c = guess.charAt(i);
+                for (int j = 0; j < secretNumber.length(); j++) {
+                    if (i != j && c == secretNumber.charAt(j) && !bullFlags[j]) {
+                        cows++;
+                        bullFlags[j] = true; // Помічаємо цю цифру, щоб уникнути подвійного врахування
+                        break;
+                    }
+                }
+            }
+        }
+
         return cows;
     }
+
 }
