@@ -8,7 +8,7 @@ public class Human implements Player{
         while(true){
             System.out.println("Введіть чотирьохзначне число: ");
             input = scanner.nextLine();
-            if(input.matches("\\d{4}")){
+            if(input.matches("\\d{4}") && !(input.charAt(0) =='0')){
                 break;
             } else{
                 System.out.println("Ви ввели не чотирьохзначне число! :(");
