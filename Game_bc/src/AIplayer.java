@@ -2,12 +2,37 @@ import java.util.Random;
 
 
 public class AIplayer implements Player{
+    private final int min;
+    private final int max;
     private final Random random = new Random();
+
+    public AIplayer(int difficulty){
+        switch(difficulty){
+            case 0:
+                min = 1000;
+                max = 2000;
+                break;
+            case 1:
+                min = 1000;
+                max = 4000;
+                break;
+            case 2:
+                min = 1000;
+                max = 7000;
+                break;
+            case 3:
+                min = 1000;
+                max = 9999;
+                break;
+            default:
+                throw new IllegalArgumentException("Неправильний рівень складності");
+        }
+    }
 
     @Override
     public String getGuess(){
-        int guess = 1000 + random.nextInt(9000);
-        System.out.println("AI намагається вгадати, його здогадка: " + guess);
+        int guess = min + random.nextInt(max - min + 1);
+        System.out.println("AI гравець вгадує, його здогадка: " + guess);
         return String.valueOf(guess);
     }
 }
