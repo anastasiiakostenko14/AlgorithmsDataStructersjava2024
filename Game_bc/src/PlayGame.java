@@ -8,13 +8,11 @@ public class PlayGame {
 
         System.out.println("Привіт, перед тим, як розпочати гру. Обери параметри:)");
 
-        // Вибір рівня складності
         chooseDifficulty(scanner);
 
         NumberGenerator numberOfGeneration;
         Player player;
 
-        // Використання обраного рівня складності для генератора та гравця
         numberOfGeneration = chooseNumberGenerator(scanner);
         player = choosePlayer(scanner);
 

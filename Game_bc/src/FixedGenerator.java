@@ -24,6 +24,7 @@ public class FixedGenerator implements NumberGenerator {
             case 3:
                 min = 1000;
                 max = 9999;
+                break;
             default:
                 throw new IllegalArgumentException("Неправильний рівень складності");
         }

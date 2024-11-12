@@ -22,6 +22,7 @@ public class Human implements Player{
             case 3:
                 min = 1000;
                 max = 9999;
+                break;
             default:
                 throw new IllegalArgumentException("Неправильний рівень складності");
         }
@@ -42,17 +43,4 @@ public class Human implements Player{
             return getGuess();
         }
     }
- /*       String input;
-        while(true){
-            System.out.println("Введіть чотирьохзначне число: ");
-            input = scanner.nextLine();
-            if(input.matches("\\d{4}") && !(input.charAt(0) =='0')){
-                break;
-            } else{
-                System.out.println("Ви ввели не чотирьохзначне число! :(");
-            }
-        }
-        return input;
-    }
-*/
 }
