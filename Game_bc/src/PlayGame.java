@@ -1,5 +1,7 @@
+import generator.FixedNumberGenerator;
 import generator.NumberGenerator;
 import generator.RandomNumberGenerator;
+import player.AIPlayer;
 import player.HumanPlayer;
 import player.Player;
 
@@ -69,7 +71,7 @@ public class PlayGame {
             if (choice == 0) {
                 player = new HumanPlayer(difficulty);
             } else if (choice == 1) {
-                player = new Game.AIPlayer(difficulty);
+                player = new AIPlayer(difficulty);
             } else {
                 System.out.println("Немає такого вибору! Будь-ласка оберіть 0 або 1");
             }
