@@ -1,3 +1,6 @@
+import generator.NumberGenerator;
+import player.Player;
+
 public class Game {
     private final String secretNumber;
     private final Player player;

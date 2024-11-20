@@ -1,11 +1,13 @@
+package generator;
+
 import java.util.Random;
 
-public class RandomGenerator implements NumberGenerator{
+public class RandomNumberGenerator implements NumberGenerator {
     private final int min;
     private final int max;
     private final Random random = new Random();
 
-    public RandomGenerator(int difficulty){
+    public RandomNumberGenerator(int difficulty){
             switch(difficulty){
                 case 0:
                     min = 1000;

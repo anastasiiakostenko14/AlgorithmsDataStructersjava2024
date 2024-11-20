@@ -1,3 +1,10 @@
+import generator.FixedNumberGenerator;
+import generator.NumberGenerator;
+import generator.RandomNumberGenerator;
+import player.AIPlayer;
+import player.HumanPlayer;
+import player.Player;
+
 import java.util.Scanner;
 
 public class PlayGame {
@@ -41,9 +48,9 @@ public class PlayGame {
             scanner.nextLine();
 
             if (choice == 0) {
-                numberGenerator = new FixedGenerator(difficulty);
+                numberGenerator = new FixedNumberGenerator(difficulty);
             } else if (choice == 1) {
-                numberGenerator = new RandomGenerator(difficulty);
+                numberGenerator = new RandomNumberGenerator(difficulty);
             } else {
                 System.out.println("Немає такого вибору! Будь-ласка оберіть 0 або 1");
             }
@@ -62,9 +69,9 @@ public class PlayGame {
             scanner.nextLine();
 
             if (choice == 0) {
-                player = new Human(difficulty);
+                player = new HumanPlayer(difficulty);
             } else if (choice == 1) {
-                player = new AIplayer(difficulty);
+                player = new AIPlayer(difficulty);
             } else {
                 System.out.println("Немає такого вибору! Будь-ласка оберіть 0 або 1");
             }

@@ -1,10 +1,12 @@
+package player;
+
 import java.util.Scanner;
-public class Human implements Player{
+public class HumanPlayer implements Player {
     private final int min;
     private final int max;
     private final Scanner scanner = new Scanner(System.in);
 
-    public Human(int difficulty) {
+    public HumanPlayer(int difficulty) {
 
         switch(difficulty){
             case 0:
