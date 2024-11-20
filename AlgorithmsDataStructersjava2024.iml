@@ -7,6 +7,9 @@
       <sourceFolder url="file://$MODULE_DIR$/LinkedList" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/12-HashMap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/game/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/game-fold" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
